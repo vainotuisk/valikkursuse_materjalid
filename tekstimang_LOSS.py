@@ -1,7 +1,7 @@
 ﻿##
 # Väino Tuisk        
 # Tekstimäng LOSS
-# -*- coding: utf-8 -*-
+
 
 #   Moodusta tühi järjend nimega ruumid
 ruumid =[]
@@ -10,10 +10,9 @@ ruumid =[]
 # liigub põhja, itta, lõunasse või läände. Kasuta None, kui ruumi pole (mitte jutumärkides). Vajadusel joonista skeem.
 ruum = ["Esik",1,2,3,4]
 
-##    Append this room to the room list.
-# lisa ruum ruumide järjendisse
+## lisa ruum ruumide järjendisse
 ruumid.append(ruum)
-ruum = ['Sa oled fuajees. Siin on uks põhja ja itta.', 1, 1, None, None]
+ruum = ['Sa oled fuajees. Siin on uks p6hja ja itta.', 1, 1, None, None]
 ruumid.append(ruum)
 # Korda viimaseid tegevusi kõigi ruumide jaoks, mida soovid mängus kasutada.
 
@@ -36,7 +35,7 @@ while tehtud:
     print(ruumid[asukoht][0])
 
 ##    Peale ruumi kirjelduse väljastamist, lisa rida, mis küsib kasutajalt mis suunas ta soovib liikuda
-    suund = input("Mis suunas soovid edasi liikuda? (n/e/s/w) "
+    suund = input("Mis suunas soovid edasi liikuda? (n/e/s/w) ")
 ##    Add an if statement to see if the user wants to go north.
 ## lisa if-lause, mis kontrollib kas valiti põhjasuund (n)
     if suund == "n":
