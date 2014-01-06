@@ -42,7 +42,7 @@ while tehtud:
 ##    If the user wants to go north, create a variable called next_room and get it equal to room_list[current_room][1],
 ##                  which should be the number for what room is to the north.
 ##    Kui kasutaja soovib suunduda põhja (n) siis tee muutuja jargmine_ruum sea see võrduma ruumid[asukoht][1]] mis on põhjasuuna ruumi tähis
-        jargmine_ruum = ruumid[asukoht][1]]
+        jargmine_ruum = ruumid[asukoht][1]
 
 ##    Lisa veel üks if-lause, mis kontrollib kas jargmine_ruum on võrdne None. Kui see on nii siis prindi välja midagi selllist: "Sa ei saa selles suunas minna".
         if jargmine_ruum == "None":
