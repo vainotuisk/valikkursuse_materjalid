@@ -8,14 +8,23 @@ ruumid =[]
 
 # Tee muutuja ruum ja sea see võrduma viieelemendilise järjendiga. Esimene element on ruumi kirjeldus, järgmised 4 on ruumi number kui mängija
 # liigub põhja, itta, lõunasse või läände. Kasuta None, kui ruumi pole (mitte jutumärkides). Vajadusel joonista skeem.
-ruum = ["Esik",1,2,3,4]
+ruum = ["Sa oled fuajees. Siin on uks p6hja.",1,None,None,None]
 
 ## lisa ruum ruumide järjendisse
 ruumid.append(ruum)
-ruum = ['Sa oled fuajees. Siin on uks p6hja ja itta.', 1, 1, None, None]
+ruum = ['Sa oled koridoris. Siin on uks läände ja lõunasse.', None, None,1,1]
 ruumid.append(ruum)
 # Korda viimaseid tegevusi kõigi ruumide jaoks, mida soovid mängus kasutada.
-
+ruum = ['Sa oled õuduste toas. Siin on uks põhja, läände ja itta.',1,1, None,1]
+ruumid.append(ruum)
+ruum = ['Sa oled sahvris. Siin on uks itta.', None,1, None,None]
+ruumid.append(ruum)
+ruum = ['Sa oled verandal. Siin on uks itta ja lõunasse.', None,1,1,None]
+ruumid.append(ruum)
+ruum = ['Sa oled saalis. Siin on uks läände ja lõunasse.', None, None,1,1]
+ruumid.append(ruum)
+ruum = ['Sa oled salatoas, leidsid aarde! Siin on uks põhja.', None, None,1,1]
+ruumid.append(ruum)
 
 # Tee muutuja asukoht ja sea selle väärtuseks 0.
 asukoht = 0
@@ -31,18 +40,18 @@ print(ruumid[asukoht][0])
 tehtud = False
 
 ##Seejärel pane ruumikirjelduse väljastamine while tsüklisse, mis toimib kuni tehtud saab väärtuseks True
-while tehtud:
+while not tehtud:
     print(ruumid[asukoht][0])
 
 ##    Peale ruumi kirjelduse väljastamist, lisa rida, mis küsib kasutajalt mis suunas ta soovib liikuda
-    suund = input("Mis suunas soovid edasi liikuda? (n/e/s/w) ")
+    suund = raw_input("Mis suunas soovid edasi liikuda? (n/e/s/w) ")
 ##    Add an if statement to see if the user wants to go north.
 ## lisa if-lause, mis kontrollib kas valiti põhjasuund (n)
     if suund == "n":
 ##    If the user wants to go north, create a variable called next_room and get it equal to room_list[current_room][1],
 ##                  which should be the number for what room is to the north.
 ##    Kui kasutaja soovib suunduda põhja (n) siis tee muutuja jargmine_ruum sea see võrduma ruumid[asukoht][1]] mis on põhjasuuna ruumi tähis
-        jargmine_ruum = ruumid[asukoht][1]]
+        jargmine_ruum = ruumid[asukoht][1]
 
 ##    Lisa veel üks if-lause, mis kontrollib kas jargmine_ruum on võrdne None. Kui see on nii siis prindi välja midagi selllist: "Sa ei saa selles suunas minna".
         if jargmine_ruum == "None":
