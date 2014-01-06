@@ -1,6 +1,7 @@
 ﻿##
 # Väino Tuisk        
 # Tekstimäng LOSS
+# -*- coding: utf-8 -*-
 
 #   Moodusta tühi järjend nimega ruumid
 ruumid =[]
@@ -11,18 +12,21 @@ ruum = ["Esik",1,2,3,4]
 
 ##    Append this room to the room list.
 # lisa ruum ruumide järjendisse
-ruumid.append[ruum]
-
-
+ruumid.append(ruum)
+ruum = ['Sa oled fuajees. Siin on uks põhja ja itta.', 1, 1, None, None]
+ruumid.append(ruum)
 # Korda viimaseid tegevusi kõigi ruumide jaoks, mida soovid mängus kasutada.
 
 ##    Create a variable called current_room. Set it to zero.
 # Tee muutuja asukoht ja sea selle väärtuseks 0.
 asukoht = 0
-##    Using current_room and room_list, print the current room the user is in. Run the program and confirm you get output similar to:
-##    ['You are in a room. There is a passage to the north.', 1, None, None, None]
-##    Change the print statement so that you only print the description of the room, and not the rooms that hook up to it:
-##    You are in a room. There is a passage to the north.
+
+##  Kasutades muutujaid asukoht ja ruumid, väljasta konsoolile selle ruumi andmed, kus parasjagu oled. Tulemus peaks olema midagi sellist:
+##  ['Sa oled fuajees. Siin on uks põhja ja itta.', 1, 1, None, None]
+print(ruumid[asukoht+1])
+lokk=input("mis")
+##Muuda väljundit selliselt, et väljastatakse ainult tekst ruumi kohta, mitte järjendi teisi andmeid, nt:
+##    "Sa oled fuajees. Siin on uks põhja ja itta."
 ##    Create a variable called done and set it to False. Then put the printing of the room description in a while loop that repeats until done is set to True.
 ##    After printing the room description, add a line of code that asks the user what direction they wish to go.
 ##    Add an if statement to see if the user wants to go north.
