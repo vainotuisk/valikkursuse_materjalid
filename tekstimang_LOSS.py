@@ -1,69 +1,69 @@
-﻿##
-# Väino Tuisk        
-# Tekstimäng LOSS
+##
+# V2ino Tuisk        
+# Tekstim2ng LOSS
 
 
-#   Moodusta tühi järjend nimega ruumid
+#   Moodusta tu'hi j2rjend nimega ruumid
 ruumid =[]
 
-# Tee muutuja ruum ja sea see võrduma viieelemendilise järjendiga. Esimene element on ruumi kirjeldus, järgmised 4 on ruumi number kui mängija
-# liigub põhja, itta, lõunasse või läände. Kasuta None, kui ruumi pole (mitte jutumärkides). Vajadusel joonista skeem.
-ruum = ["Sa oled fuajees, saad ennast peeglitest imetleda.\nSiin on uks põhja.",1,None,None,None]
+# Tee muutuja ruum ja sea see v6rduma viieelemendilise j2rjendiga. Esimene element on ruumi kirjeldus, j2rgmised 4 on ruumi number kui m2ngija
+# liigub p6hja, itta, l6unasse v6i l22nde. Kasuta None, kui ruumi pole (mitte jutum2rkides). Vajadusel joonista skeem.
+ruum = ["Sa oled fuajees, saad ennast peeglitest imetleda.\nSiin on uks p6hja.",1,None,None,None]
 
-## lisa ruum ruumide järjendisse
+## lisa ruum ruumide j2rjendisse
 ruumid.append(ruum)
-ruum = ['Sa oled koridoris, päris hubane koht aga kitsas.\nSiin on uks läände ja lõunasse.', None, None,1,1]
+ruum = ['Sa oled koridoris, p2ris hubane koht aga kitsas.\nSiin on uks l22nde ja l6unasse.', None, None,1,1]
 ruumid.append(ruum)
-# Korda viimaseid tegevusi kõigi ruumide jaoks, mida soovid mängus kasutada.
-ruum = ['Sa oled õuduste toas ja väga õudne olla.\n Siin on uks põhja, läände ja itta.',1,1, None,1]
+# Korda viimaseid tegevusi k6igi ruumide jaoks, mida soovid m2ngus kasutada.
+ruum = ['Sa oled 6uduste toas ja v2ga 6udne olla.\n Siin on uks p6hja, l22nde ja itta.',1,1, None,1]
 ruumid.append(ruum)
 ruum = ['Sa oled sahvris, riiulitel on moosi ja suitsuvorsti.\nSiin on uks itta.', None,1, None,None]
 ruumid.append(ruum)
-ruum = ['Sa oled verandal, päike paistab ja vaade on suurepärane.\nSiin on uks itta ja lõunasse.', None,1,1,None]
+ruum = ['Sa oled verandal, p2ike paistab ja vaade on suurep2rane.\nSiin on uks itta ja l6unasse.', None,1,1,None]
 ruumid.append(ruum)
-ruum = ['Sa oled saalis, klaver on häälest ära ja pildid on igavad.\nSiin on uks läände ja lõunasse.', None, None,1,1]
+ruum = ['Sa oled saalis, klaver on h22lest 2ra ja pildid on igavad.\nSiin on uks l22nde ja l6unasse.', None, None,1,1]
 ruumid.append(ruum)
-ruum = ['Sa oled salatoas, leidsid aarde!\nSiin on uks põhja.', None, None,1,1]
+ruum = ['Sa oled salatoas, leidsid aarde!\nSiin on uks p6hja.', None, None,1,1]
 ruumid.append(ruum)
-
-# Tee muutuja asukoht ja sea selle väärtuseks 0.
+print ruumid
+# Tee muutuja asukoht ja sea selle v22rtuseks 0.
 asukoht = 0
 
-##  Kasutades muutujaid asukoht ja ruumid, väljasta konsoolile selle ruumi andmed, kus parasjagu oled. Tulemus peaks olema midagi sellist:
-##  ['Sa oled fuajees. Siin on uks põhja ja itta.', 1, 1, None, None]
+##  Kasutades muutujaid asukoht ja ruumid, v2ljasta konsoolile selle ruumi andmed, kus parasjagu oled. Tulemus peaks olema midagi sellist:
+##  ['Sa oled fuajees. Siin on uks p6hja ja itta.', 1, 1, None, None]
 print(ruumid[asukoht])
-##Muuda väljundit selliselt, et väljastatakse ainult tekst ruumi kohta, mitte järjendi teisi andmeid, nt:
-##    "Sa oled fuajees. Siin on uks põhja ja itta."
+##Muuda v2ljundit selliselt, et v2ljastatakse ainult tekst ruumi kohta, mitte j2rjendi teisi andmeid, nt:
+##    "Sa oled fuajees. Siin on uks p6hja ja itta."
 print(ruumid[asukoht][0])
 
-##Tee muutuja tehtud ja anna sellele väärtuseks False
+##Tee muutuja tehtud ja anna sellele v22rtuseks False
 tehtud = False
 
-##Seejärel pane ruumikirjelduse väljastamine while tsüklisse, mis toimib kuni tehtud saab väärtuseks True
+##Seej2rel pane ruumikirjelduse v2ljastamine while tsu'klisse, mis toimib kuni tehtud saab v22rtuseks True
 while not tehtud:
- #   print(ruumid[asukoht][0])
+    print(ruumid[asukoht][0])
 
-##    Peale ruumi kirjelduse väljastamist, lisa rida, mis küsib kasutajalt mis suunas ta soovib liikuda
+##    Peale ruumi kirjelduse v2ljastamist, lisa rida, mis ku'sib kasutajalt mis suunas ta soovib liikuda
     suund = raw_input("\nMis suunas soovid edasi liikuda? (n/e/s/w) ")
 ##    Add an if statement to see if the user wants to go north.
-## lisa if-lause, mis kontrollib kas valiti põhjasuund (n)
+## lisa if-lause, mis kontrollib kas valiti p6hjasuund (n)
     if suund == "n":
 ##    If the user wants to go north, create a variable called next_room and get it equal to room_list[current_room][1],
 ##                  which should be the number for what room is to the north.
-##    Kui kasutaja soovib suunduda põhja (n) siis tee muutuja jargmine_ruum sea see võrduma ruumid[asukoht][1]] mis on põhjasuuna ruumi tähis
+##    Kui kasutaja soovib suunduda p6hja (n) siis tee muutuja jargmine_ruum sea see v6rduma ruumid[asukoht][1]] mis on p6hjasuuna ruumi t2his
         jargmine_ruum = ruumid[asukoht][1]
 
-##    Lisa veel üks if-lause, mis kontrollib kas jargmine_ruum on võrdne None. Kui see on nii siis prindi välja midagi selllist: "Sa ei saa selles suunas minna".
+##    Lisa veel u'ks if-lause, mis kontrollib kas jargmine_ruum on v6rdne None. Kui see on nii siis prindi v2lja midagi selllist: "Sa ei saa selles suunas minna".
         if jargmine_ruum == "None":
             print("Sa ei saa selles suunas minna.")
             
-##    Muul juhul sea asukoht võrduma jargmine_ruum väärtusega
+##    Muul juhul sea asukoht v6rduma jargmine_ruum v22rtusega
         else:
             asukoht = jargmine_ruum
 
 ##  Testi oma programmi, kas saad minna uude ruumi?            
 
-##  Lisa elif-laused ida-, lõuna- ja läänesuuna valikuks. Samuti lisa else-lause juhuks kui programm ei saa aru, mis märk sisestati.
+##  Lisa elif-laused ida-, l6una- ja l22nesuuna valikuks. Samuti lisa else-lause juhuks kui programm ei saa aru, mis m2rk sisestati.
     elif suund == "e":
         jargmine_ruum = ruumid[asukoht][2]
         if jargmine_ruum == "None":
@@ -85,11 +85,11 @@ while not tehtud:
     else:
         print("Ei saanud sinust aru.")
 
-##    Lisa ruume juurde, vähemalt 5. Vajadusel tee joonis, et saada ülevaade ruumide asetusest
+##    Lisa ruume juurde, v2hemalt 5. Vajadusel tee joonis, et saada u'levaade ruumide asetusest
     
-##  Testi mängu
-## Arendusvõimalusi:
-##  Lisa mängust väljumise valik, lisa võimalus, et programm töötaks ka suurte tähtedega            
+##  Testi m2ngu
+## Arendusv6imalusi:
+##  Lisa m2ngust v2ljumise valik, lisa v6imalus, et programm to'o'taks ka suurte t2htedega            
 
 
 
