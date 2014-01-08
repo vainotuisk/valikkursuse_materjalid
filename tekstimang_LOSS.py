@@ -1,4 +1,4 @@
-##
+﻿##
 # V2ino Tuisk        
 # Tekstim2ng LOSS
 
@@ -31,7 +31,7 @@ asukoht = 0
 
 ##  Kasutades muutujaid asukoht ja ruumid, v2ljasta konsoolile selle ruumi andmed, kus parasjagu oled. Tulemus peaks olema midagi sellist:
 ##  ['Sa oled fuajees. Siin on uks p6hja ja itta.', 1, 1, None, None]
-print(ruumid[asukoht])
+##print(ruumid[asukoht])
 ##Muuda v2ljundit selliselt, et v2ljastatakse ainult tekst ruumi kohta, mitte j2rjendi teisi andmeid, nt:
 ##    "Sa oled fuajees. Siin on uks p6hja ja itta."
 print(ruumid[asukoht][0])
@@ -52,6 +52,7 @@ while not tehtud:
 ##                  which should be the number for what room is to the north.
 ##    Kui kasutaja soovib suunduda p6hja (n) siis tee muutuja jargmine_ruum sea see v6rduma ruumid[asukoht][1]] mis on p6hjasuuna ruumi t2his
         jargmine_ruum = ruumid[asukoht][1]
+        print("Järgmine ruum on " + str(jargmine_ruum))
 
 ##    Lisa veel u'ks if-lause, mis kontrollib kas jargmine_ruum on v6rdne None. Kui see on nii siis prindi v2lja midagi selllist: "Sa ei saa selles suunas minna".
         if jargmine_ruum == "None":
