@@ -12,20 +12,20 @@ ruum = ["Sa oled fuajees, saad ennast peeglitest imetleda.\nSiin on uks p6hja.",
 
 ## lisa ruum ruumide j2rjendisse
 ruumid.append(ruum)
-ruum = ['Sa oled koridoris, p2ris hubane koht aga kitsas.\nSiin on uks l22nde ja l6unasse.', None, None,1,1]
+ruum = ['Sa oled koridoris, p2ris hubane koht aga kitsas.\nSiin on uks l22nde.', None, None,None,2]
 ruumid.append(ruum)
 # Korda viimaseid tegevusi k6igi ruumide jaoks, mida soovid m2ngus kasutada.
-ruum = ['Sa oled 6uduste toas ja v2ga 6udne olla.\n Siin on uks p6hja, l22nde ja itta.',1,1, None,1]
+ruum = ['Sa oled 6uduste toas ja v2ga 6udne olla.\nSiin on uks p6hja, l22nde ja itta.',4,1, None,3]
 ruumid.append(ruum)
-ruum = ['Sa oled sahvris, riiulitel on moosi ja suitsuvorsti.\nSiin on uks itta.', None,1, None,None]
+ruum = ['Sa oled sahvris, riiulitel on moosi ja suitsuvorsti.\nSiin on uks itta.', None,2, None,None]
 ruumid.append(ruum)
-ruum = ['Sa oled verandal, p2ike paistab ja vaade on suurep2rane.\nSiin on uks itta ja l6unasse.', None,1,1,None]
+ruum = ['Sa oled verandal, p2ike paistab ja vaade on suurep2rane.\nSiin on uks itta ja l6unasse.', None,5,2,None]
 ruumid.append(ruum)
-ruum = ['Sa oled saalis, klaver on h22lest 2ra ja pildid on igavad.\nSiin on uks l22nde ja l6unasse.', None, None,1,1]
+ruum = ['Sa oled saalis, klaver on h22lest 2ra ja pildid on igavad.\nSiin on uks l22nde ja l6unasse.', None, None,6,4]
 ruumid.append(ruum)
-ruum = ['Sa oled salatoas, leidsid aarde!\nSiin on uks p6hja.', None, None,1,1]
+ruum = ['Sa oled salatoas, leidsid aarde!\nSiin on uks p6hja.',5, None, None,None]
 ruumid.append(ruum)
-print ruumid
+##print ruumid
 # Tee muutuja asukoht ja sea selle v22rtuseks 0.
 asukoht = 0
 
@@ -52,10 +52,10 @@ while not tehtud:
 ##                  which should be the number for what room is to the north.
 ##    Kui kasutaja soovib suunduda p6hja (n) siis tee muutuja jargmine_ruum sea see v6rduma ruumid[asukoht][1]] mis on p6hjasuuna ruumi t2his
         jargmine_ruum = ruumid[asukoht][1]
-        print("Järgmine ruum on " + str(jargmine_ruum))
+##        print("Järgmine ruum on " + str(jargmine_ruum))
 
 ##    Lisa veel u'ks if-lause, mis kontrollib kas jargmine_ruum on v6rdne None. Kui see on nii siis prindi v2lja midagi selllist: "Sa ei saa selles suunas minna".
-        if jargmine_ruum == "None":
+        if str(jargmine_ruum) == "None":
             print("Sa ei saa selles suunas minna.")
             
 ##    Muul juhul sea asukoht v6rduma jargmine_ruum v22rtusega
@@ -67,19 +67,19 @@ while not tehtud:
 ##  Lisa elif-laused ida-, l6una- ja l22nesuuna valikuks. Samuti lisa else-lause juhuks kui programm ei saa aru, mis m2rk sisestati.
     elif suund == "e":
         jargmine_ruum = ruumid[asukoht][2]
-        if jargmine_ruum == "None":
+        if str(jargmine_ruum) == "None":
             print("Sa ei saa selles suunas minna.")
         else:
             asukoht = jargmine_ruum
     elif suund == "s":
         jargmine_ruum = ruumid[asukoht][3]
-        if jargmine_ruum == "None":
+        if str(jargmine_ruum) == "None":
             print("Sa ei saa selles suunas minna.")
         else:
             asukoht = jargmine_ruum
     elif suund == "w":
         jargmine_ruum = ruumid[asukoht][4]
-        if jargmine_ruum == "None":
+        if str(jargmine_ruum) == "None":
             print("Sa ei saa selles suunas minna.")
         else:
             asukoht = jargmine_ruum
