@@ -13,6 +13,10 @@ punane = [255,0,0]
 
 aken.fill(valge)
 
+pilt = pygame.image.load("pingviin.png")
+# aken.blit(pilt, (40, 60))
+xy = pilt.get_rect().size
+print (xy[0],xy[1])
 
 
 pygame.display.flip()
